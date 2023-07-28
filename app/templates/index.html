@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{data.titulo}}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
 </head>
 <body>
     <h1>hola {{ data.encabezado}}</h1>
@@ -14,5 +15,9 @@
         <li>buenas nuevas</li>
         <li>buenas nuevas</li>
     </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio alias sapiente culpa quae molestiae officiis repellendus earum nobis facilis at ex, doloribus nemo cumque veniam assumenda unde eligendi! Fugiat, laboriosam!</p>
+
+
+    <script src="{{ url_for('static', filename='js/index.js')}}"></script>
 </body>
 </html>
