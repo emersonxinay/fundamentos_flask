@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__)
 # rutas
 # @app.route('/')
@@ -56,6 +56,14 @@ def lenguajes():
     }
     
     return render_template('lenguajes.html', data=data)
+
+# protocolos transfer  GET, POST, PUT, DELETE
+@app.route('/datos')
+def datos():
+    # print(request.args)
+    valor1 = request.args.get('valor1')
+    return f"Solo son datos: {valor1} "
+
 # bloque de pruebas
 if __name__ == "__main__":
     app.add_url_rule('/', view_func=index)
