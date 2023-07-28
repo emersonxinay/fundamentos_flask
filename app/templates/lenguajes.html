@@ -1,0 +1,17 @@
+{% extends './base.html'%}
+
+{%block contenido %}
+<h2> Estamos en los lenguajes de programación </h2>
+<ul>
+    <!-- condicionar si hay lenguajes o no -->
+    {% if data.lenguajes|length >= 0 %}
+    <!-- recorrer como blucle  -->
+        {% for leng in data.lenguajes %}
+            <li> {{leng}} </li>
+        {% endfor%}
+
+    {% else %}
+    <h3> No existe lenguajes listados </h3>
+    {% endif %}
+</ul>
+{% endblock%}

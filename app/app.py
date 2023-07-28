@@ -45,6 +45,17 @@ def suma(valor, valor2):
 def perfil(nombre2, edad):
     return f' mi nombre es {nombre2} y mi edad es {edad}'
 
+# ruta para un diccionario de lenguajes de programación 
+@app.route('/lenguajes')
+def lenguajes():
+
+    data= {
+        'hay_lenguajes': True,
+        'lenguajes': ['Ruby', 'Php', 'Python', 'Java', 'C#', 'Go', 'Dart', 'JavaScript']
+
+    }
+    
+    return render_template('lenguajes.html', data=data)
 # bloque de pruebas
 if __name__ == "__main__":
     app.add_url_rule('/', view_func=index)
