@@ -19,6 +19,15 @@ def index2():
 @app.route('/holamundo')
 def hola_mundo():
     return "Hola mundo de FLask"
+# agregando ruta para contacto
+@app.route('/contacto')
+def contacto():
+    data = {
+        "titulo": "contacto",
+        "encabezado": "Bienvenido"
+
+    }
+    return render_template("contacto.html", data = data)
 # bloque de pruebas
 if __name__ == "__main__":
     app.add_url_rule('/', view_func=index2)
