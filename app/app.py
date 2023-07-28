@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # segunda forma de poner rutas
 
-def index2():
+def index():
     data = {
         "titulo": "mi titulo",
         "encabezado": "Bienvenido"
@@ -30,7 +30,7 @@ def contacto():
     return render_template("contacto.html", data = data)
 # bloque de pruebas
 if __name__ == "__main__":
-    app.add_url_rule('/', view_func=index2)
+    app.add_url_rule('/', view_func=index)
     # personalizando puertos y no reiniciar a cada rato el servidor
     app.run(debug=True, port=5005)
 

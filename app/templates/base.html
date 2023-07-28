@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
 </head>
 <body>
+    <nav>
+        <a href="{{ url_for('index')}}">index</a>
+        <a href="{{ url_for('contacto')}}">contacto</a>
+
+    </nav>
+    <br>
     <h1>hola {{ data.encabezado}}</h1>
     {% block contenido  %}
     
